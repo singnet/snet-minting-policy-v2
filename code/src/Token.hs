@@ -75,13 +75,14 @@ saveTokenPolicy owners tokenName = writePolicyToFile
 -- FOR TESTS
 saveTestTokenPolicy:: IO ()
 saveTestTokenPolicy = writePolicyToFile
-  (printf "../scripts/token.plutus") $
+  (printf "../scripts/testToken.plutus") $
     policy testOwners testTokenName
 
 testOwners:: [PubKeyHash]
 testOwners = [
   "2a83c7337d41ecaae97eeca7b5d0084d7e92cf2ffd63b7a050e081c5",
-  "72685a71048aec57d28d426a9a54bbef55853ac6baac469b70917249"]
+  "72685a71048aec57d28d426a9a54bbef55853ac6baac469b70917249",
+  "cca20bf9b05c9b8701bf8355bcad6821207033054f4f535fe40084d0"]
 
 testTokenName :: TokenName
-testTokenName = "TToken"
+testTokenName = "NTOKEN"
