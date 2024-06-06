@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "@types/node": "^20.14.2"
+  },
+  "dependencies": {
+    "buffer": "^6.0.3"
+  }
+}

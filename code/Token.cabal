@@ -1,0 +1,38 @@
+cabal-version:      3.4
+name:               token
+version:            2.0
+author:             SNET
+maintainer:         anastasia.martynyuk@singularitynet.io
+license:            Apache-2.0
+build-type:         Simple
+
+common common-all
+    build-depends:    base ^>=4.14.3.0
+                    , aeson
+                    , bytestring
+                    , filepath
+                    , containers
+                    , cardano-api
+                    , data-default
+                    , plutus-ledger-api
+                    , plutus-tx-plugin
+                    , plutus-tx
+                    , text
+                    , serialise
+                    , utilities
+    default-language: Haskell2010
+    ghc-options: -Wall -fobject-code -fno-ignore-interface-pragmas
+                 -fno-omit-interface-pragmas -fno-strictness 
+                 -fno-spec-constr -fno-specialise -fexpose-all-unfoldings
+                 -fplugin-opt PlutusTx.Plugin:defer-errors
+
+common common-all-tests
+    import:           common-all
+    build-depends:    QuickCheck
+                    , tasty
+                    , plutus-simple-model
+
+library
+    import:             common-all
+    hs-source-dirs:     ./src
+    exposed-modules:    Token
