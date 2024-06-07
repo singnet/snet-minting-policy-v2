@@ -2,6 +2,7 @@
 
 Use the provided VSCode devcontainer to get an environment with the correct tools set up.
 This approach is the easiest & fastest one. Clone repository and open it in VSCode.
+[Docker setup](https://iog-academy.gitbook.io/plutus-pioneers-program-fourth-cohort/preliminary-work/setup/docker).
 
 ## Installation tips for NodeJs
 ```sh
